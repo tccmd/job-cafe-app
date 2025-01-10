@@ -1,0 +1,186 @@
+import 'package:CUDI/screens/payments/my_coupon_screen.dart';
+import 'package:CUDI/screens/payments/my_cupay_screen.dart';
+import 'package:CUDI/screens/my_cudi/cs/customer_center_screen.dart';
+import 'package:CUDI/screens/my_cudi/cs/grade_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
+import '../../constants.dart';
+import '../../models/store.dart';
+import '../../theme.dart';
+import '../../utils/db/firebase_firestore.dart';
+import '../../utils/provider.dart';
+import '../components/app_bar.dart';
+import '../components/icons/cart_icon.dart';
+import '../components/icons/svg_icon.dart';
+import '../order/my_order_history_screen.dart';
+import 'components/profile.dart';
+import 'cs/event_screen.dart';
+import 'cs/review_screen.dart';
+
+class MyCUDIScreen extends StatefulWidget {
+  const MyCUDIScreen({Key? key}) : super(key: key);
+
+  @override
+  State<MyCUDIScreen> createState() => _MyScreenState();
+}
+
+class _MyScreenState extends State<MyCUDIScreen> {
+  // 파이어베이스 데이터
+  void _initializeData() async {
+    if (mounted) {}
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeData();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final uid = context.read<UserProvider>().uid;
+    return Scaffold(
+      body: CustomScrollView(
+        physics: const ClampingScrollPhysics(),
+        slivers: <Widget>[
+          sliverAppBar(context,
+              title: '내 정보', isGoHome: true, iconButton: const CartIcon()),
+          SliverList(
+            delegate: SliverChildListDelegate([
+              Padding(
+                padding: pd24h,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    profile(context, isMyScreen: true),
+                    myRowList(),
+                    dividerMy,
+                    sbh8,
+                    myColumnList(),
+                    TextButton(
+                        onPressed: () {
+                          Store store = Store(
+                            uid: uid,
+                            storeName: "딥플로우브루잉 광안리점",
+                            storeSubTitle: "딥플로우커피 광안리점 설명입니다.",
+                            storeDescription: "자가 이용 시 카페 맞은 편 산호주차장 주차가능(30분 1500원)하며 대중교통 이용 시 금련산역 1번출구에서 광안리 해변 쪽으로 3분 도보 입니다.",
+                            storeAddress: "부산 수영구 수영로510번길 20 딥플로우브루잉 광안리점",
+                            storeTell: "0507-1350-4906",
+                            storeTraffic: "",
+                            storeHours: "11:00 - 19:00(18:30 라스트오더)",
+                            storeClosed: "일요일",
+                            storeParking: "산호주차장 주차가능(30분 1500원)",
+                            storeTMap: "https://surl.tmobiapi.com/0e235207",
+                            storeThumbnail:
+                            "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/deep_flow_gwangalli_thumbnail.jpg",
+                            storeImageUrl:
+                            "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/deep_flow_gwangalli.jpg",
+                            storeVideoUrl:
+                            "https://3d-allrounder.com/deep_flow/3d/deep-flow.mp4",
+                            storeThreeDUrl: "https://3d-allrounder.com/deep_flow_gwangalli/light",
+                            storeImgList: [
+                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_01.jpg",
+                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_02.jpg",
+                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_03.jpg",
+                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_04.jpg",
+                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_05.jpg",
+                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_06.jpg",
+                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_07.jpg",
+                            ],
+                            storeTagList: ["주차장"],
+                          );
+                          FireStore.addStore(store);
+                        },
+                        child: const Text('스토어 추가')),
+                  ],
+                ),
+              ),
+            ]),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget myRowList() {
+    final Map<String, String> myRowListList = {
+      '주문내역': 'assets/icon/ico-line-list-24px.svg',
+      '쿠디페이': 'assets/icon/ico-line-cupay-24px.svg',
+      '쿠폰': 'assets/icon/ico-line-cupon-24px.svg',
+    };
+    return Container(
+      padding: pd24T,
+      height: 144.h,
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: myRowListList.length,
+          itemBuilder: (context, index) {
+            String key = myRowListList.keys.elementAt(index);
+            List<Widget> myRowWidgetList = [
+              MyOrderHistoryScreen(title: key),
+              const MyCupayScreen(),
+              MyCouponScreen(title: key),
+            ];
+            return InkWell(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => myRowWidgetList[index])),
+              child: SizedBox(
+                width: 114.w,
+                height: 64.h,
+                child: Center(
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        svgIcon(myRowListList[key]!),
+                        sbh24,
+                        Text(key, style: w500),
+                      ]),
+                ),
+              ),
+            );
+          }),
+    );
+  }
+
+  Widget myColumnList() {
+    List<String> myColumnListTitles = ['이벤트', '쿠디 등급', '리뷰', '고객센터'];
+    return SizedBox(
+      child: ListView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: myColumnListTitles.length,
+          itemBuilder: (context, index) {
+            List<Widget> myColumnWidgetList = [
+              MyEventScreen(title: myColumnListTitles[index]),
+              MyGradeScreen(title: myColumnListTitles[index]),
+              MyReviewScreen(title: myColumnListTitles[index]),
+              CustomerCenterScreen(title: myColumnListTitles[index]),
+            ];
+            return myColumItem(
+                myColumnListTitles[index], myColumnWidgetList[index]);
+          }),
+    );
+  }
+
+  Widget myColumItem(title, route) {
+    goFunction() =>
+        Navigator.push(context, MaterialPageRoute(builder: (context) => route));
+    return InkWell(
+        onTap: goFunction,
+        child: Padding(
+          padding: pd16v,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(title, style: s16w500),
+              svgIcon('assets/icon/ico-line-arrow-right-white-24px.svg',
+                  function: goFunction),
+            ],
+          ),
+        ));
+  }
+}
