@@ -1,7 +1,7 @@
-import 'package:CUDI/models/coupon.dart';
-import 'package:CUDI/models/favorite.dart';
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/widgets/cudi_util_widgets.dart';
+import 'package:jobCafeApp/models/coupon.dart';
+import 'package:jobCafeApp/models/favorite.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_util_widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:flutter/material.dart';
@@ -793,22 +793,22 @@ class FireStore {
     return userCoupons;
   }
 
-// static void updateStoreData(
-//     String storeId, double latitude, double longitude) {
-//   FirebaseFirestore db = FirebaseFirestore.instance;
-//   final storeRef = db.collection("store").doc(storeId);
-//
-//   Store store = Store();
-//   Map<String, dynamic> updatedData = store.toFirestore();
-//   // updatedData["latitude"] = latitude;
-//   // updatedData["longitude"] = longitude;
-//
-//   storeRef.update(updatedData).then((value) {
-//     debugPrint("Document successfully updated!");
-//   }, onError: (e) {
-//     debugPrint("Error updating document: $e");
-//   });
-// }
+static void updateStoreData(
+    String storeId, double latitude, double longitude) {
+  FirebaseFirestore db = FirebaseFirestore.instance;
+  final storeRef = db.collection("store").doc(storeId);
+
+  Store store = Store();
+  Map<String, dynamic> updatedData = store.toFirestore();
+  updatedData["latitude"] = latitude;
+  updatedData["longitude"] = longitude;
+
+  storeRef.update(updatedData).then((value) {
+    debugPrint("Document successfully updated!");
+  }, onError: (e) {
+    debugPrint("Error updating document: $e");
+  });
+}
 
 // 유저 등록
 // static void addUser(User user) async {

@@ -1,6 +1,6 @@
 // import 'dart:io';
 //
-// import 'package:CUDI/utils/toss/screens/tosspayments_widget/payment_widget_example_page.dart';
+// import 'package:jobCafeApp/utils/toss/screens/tosspayments_widget/payment_widget_example_page.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 // import 'package:get/get.dart';
@@ -221,8 +221,8 @@
 // }
 
 import 'dart:io';
-import 'package:CUDI/models/order.dart';
-import 'package:CUDI/utils/toss/screens/tosspayments_widget/payment_widget_example_page.dart';
+import 'package:jobCafeApp/models/order.dart';
+import 'package:jobCafeApp/utils/toss/screens/tosspayments_widget/payment_widget_example_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';

@@ -1,6 +1,6 @@
-import 'package:CUDI/screens/components/icons/svg_icon.dart';
-import 'package:CUDI/theme.dart';
-import 'package:CUDI/utils/provider.dart';
+import 'package:jobCafeApp/screens/components/icons/svg_icon.dart';
+import 'package:jobCafeApp/theme.dart';
+import 'package:jobCafeApp/utils/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../routes.dart';

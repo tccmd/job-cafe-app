@@ -1,4 +1,4 @@
-import 'package:CUDI/screens/components/closed_sheet.dart';
+import 'package:jobCafeApp/screens/components/closed_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../utils/enum.dart';

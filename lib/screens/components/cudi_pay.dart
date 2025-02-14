@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:CUDI/screens/components/icons/svg_icon.dart';
+import 'package:jobCafeApp/screens/components/icons/svg_icon.dart';
 import 'package:flutter/material.dart';
 
 class CUDIAnimatedIcon extends StatefulWidget {

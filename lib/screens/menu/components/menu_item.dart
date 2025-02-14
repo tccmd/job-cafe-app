@@ -15,11 +15,11 @@ class MenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     String menuAsset;
     if (menu.menuCategory == "시그니처") {
-      menuAsset = "./images/americano.jpg";
+      menuAsset = "assets/images/americano.jpg";
     } else if (menu.menuCategory == "커피") {
-      menuAsset = "./images/latte.jpg";
+      menuAsset = "assets/images/latte.jpg";
     } else {
-      menuAsset = "./images/juice.jpeg";
+      menuAsset = "assets/images/juice.jpeg";
     }
 
     return InkWell(

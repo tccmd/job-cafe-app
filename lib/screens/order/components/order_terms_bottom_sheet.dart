@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:CUDI/models/order.dart';
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/utils/toss/components.dart';
+import 'package:jobCafeApp/models/order.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/utils/toss/components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -287,7 +287,7 @@ class _PaymentWidgetExamplePageState extends State<PaymentWidgetExamplePage> {
                                 paymentInfo: PaymentInfo(
                                     orderId: od.orderId.toString(),
                                     orderName: od.orderName.toString(),
-                                    customerName: "쿠디 고객"));
+                                    customerName: "민트 고객"));
                             if (paymentResult.success != null) {
                               // 결제 성공 처리
                               // 결제 승인 API 호출

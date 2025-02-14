@@ -1,7 +1,7 @@
-import 'package:CUDI/screens/payments/my_coupon_screen.dart';
-import 'package:CUDI/screens/payments/my_cupay_screen.dart';
-import 'package:CUDI/screens/my_cudi/cs/customer_center_screen.dart';
-import 'package:CUDI/screens/my_cudi/cs/grade_screen.dart';
+import 'package:jobCafeApp/screens/payments/my_coupon_screen.dart';
+import 'package:jobCafeApp/screens/payments/my_cupay_screen.dart';
+import 'package:jobCafeApp/screens/my_cudi/cs/customer_center_screen.dart';
+import 'package:jobCafeApp/screens/my_cudi/cs/grade_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -58,41 +58,33 @@ class _MyScreenState extends State<MyCUDIScreen> {
                     dividerMy,
                     sbh8,
                     myColumnList(),
-                    TextButton(
-                        onPressed: () {
-                          Store store = Store(
-                            uid: uid,
-                            storeName: "딥플로우브루잉 광안리점",
-                            storeSubTitle: "딥플로우커피 광안리점 설명입니다.",
-                            storeDescription: "자가 이용 시 카페 맞은 편 산호주차장 주차가능(30분 1500원)하며 대중교통 이용 시 금련산역 1번출구에서 광안리 해변 쪽으로 3분 도보 입니다.",
-                            storeAddress: "부산 수영구 수영로510번길 20 딥플로우브루잉 광안리점",
-                            storeTell: "0507-1350-4906",
-                            storeTraffic: "",
-                            storeHours: "11:00 - 19:00(18:30 라스트오더)",
-                            storeClosed: "일요일",
-                            storeParking: "산호주차장 주차가능(30분 1500원)",
-                            storeTMap: "https://surl.tmobiapi.com/0e235207",
-                            storeThumbnail:
-                            "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/deep_flow_gwangalli_thumbnail.jpg",
-                            storeImageUrl:
-                            "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/deep_flow_gwangalli.jpg",
-                            storeVideoUrl:
-                            "https://3d-allrounder.com/deep_flow/3d/deep-flow.mp4",
-                            storeThreeDUrl: "https://3d-allrounder.com/deep_flow_gwangalli/light",
-                            storeImgList: [
-                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_01.jpg",
-                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_02.jpg",
-                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_03.jpg",
-                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_04.jpg",
-                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_05.jpg",
-                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_06.jpg",
-                              "https://3d-allrounder.com/allrounder-modules/app_img/deep_flow_gwangalli/store_img_07.jpg",
-                            ],
-                            storeTagList: ["주차장"],
-                          );
-                          FireStore.addStore(store);
-                        },
-                        child: const Text('스토어 추가')),
+                    // TextButton(
+                    //     onPressed: () {
+                    //       Store store = Store(
+                    //         uid: uid,
+                    //         storeName: "카페 3",
+                    //         storeSubTitle: "카페 3 설명입니다.",
+                    //         storeDescription: "자가 이용 시 카페 맞은 편 산호주차장 주차가능(30분 1500원)하며 대중교통 이용 시 금련산역 1번출구에서 광안리 해변 쪽으로 3분 도보 입니다.",
+                    //         storeAddress: "0000시 00구 00로 000번길 00 카페 3",
+                    //         storeTell: "000-000-0000",
+                    //         storeTraffic: "-",
+                    //         storeHours: "11:00 - 19:00(18:30 라스트오더)",
+                    //         storeClosed: "일요일",
+                    //         storeParking: "00주차장 주차가능(00분 0000원)",
+                    //         storeTMap: "https://surl.tmap.co.kr/a3086492",
+                    //         storeThumbnail:
+                    //         "",
+                    //         storeImageUrl:
+                    //         "",
+                    //         storeVideoUrl:
+                    //         "",
+                    //         storeThreeDUrl: "https://goshow.me/bundle-3d-tags/",
+                    //         storeImgList: ["", "", "", "", "", ""],
+                    //         storeTagList: ["루프탑", "주차장"],
+                    //       );
+                    //       FireStore.addStore(store);
+                    //     },
+                    //     child: const Text('스토어 추가')),
                   ],
                 ),
               ),
@@ -106,7 +98,7 @@ class _MyScreenState extends State<MyCUDIScreen> {
   Widget myRowList() {
     final Map<String, String> myRowListList = {
       '주문내역': 'assets/icon/ico-line-list-24px.svg',
-      '쿠디페이': 'assets/icon/ico-line-cupay-24px.svg',
+      '민트페이': 'assets/icon/ico-line-cupay-24px.svg',
       '쿠폰': 'assets/icon/ico-line-cupon-24px.svg',
     };
     return Container(
@@ -147,7 +139,7 @@ class _MyScreenState extends State<MyCUDIScreen> {
   }
 
   Widget myColumnList() {
-    List<String> myColumnListTitles = ['이벤트', '쿠디 등급', '리뷰', '고객센터'];
+    List<String> myColumnListTitles = ['이벤트', '민트 등급', '리뷰', '고객센터'];
     return SizedBox(
       child: ListView.builder(
           shrinkWrap: true,

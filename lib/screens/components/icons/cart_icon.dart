@@ -1,7 +1,7 @@
-import 'package:CUDI/routes.dart';
-import 'package:CUDI/screens/components/icons/svg_icon.dart';
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/widgets/cudi_widgets.dart';
+import 'package:jobCafeApp/routes.dart';
+import 'package:jobCafeApp/screens/components/icons/svg_icon.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

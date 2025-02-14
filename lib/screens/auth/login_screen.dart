@@ -1,6 +1,6 @@
-import 'package:CUDI/screens/auth/find_pw_screen.dart';
-import 'package:CUDI/utils/auth/authentication.dart';
-import 'package:CUDI/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/screens/auth/find_pw_screen.dart';
+import 'package:jobCafeApp/utils/auth/authentication.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -73,6 +73,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const Spacer(),
+            Container(
+              child: Text(
+                  "'example@example.com', 'password'로 빠르게 로그인 할 수 있습니다.",
+                  style: s12.copyWith(color: gray79)
+              ),
+            ),
             button(),
           ],
         ),

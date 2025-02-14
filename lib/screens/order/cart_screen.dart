@@ -1,10 +1,10 @@
-import 'package:CUDI/screens/components/closed_sheet.dart';
-import 'package:CUDI/screens/components/no_content.dart';
-import 'package:CUDI/screens/order/components/option_sheet.dart';
-import 'package:CUDI/screens/order/order_screen.dart';
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/widgets/cudi_buttons.dart';
-import 'package:CUDI/widgets/cudi_widgets.dart';
+import 'package:jobCafeApp/screens/components/closed_sheet.dart';
+import 'package:jobCafeApp/screens/components/no_content.dart';
+import 'package:jobCafeApp/screens/order/components/option_sheet.dart';
+import 'package:jobCafeApp/screens/order/order_screen.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/widgets/cudi_widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -82,7 +82,7 @@ class _CartScreenState extends State<CartScreen> {
 
   Widget noContent() {
     return NoContent(
-        imgUrl: 'assets/images/img-emptystate-cartlist.png',
+        imgUrl: 'assets/logo/MintChoco.png',
         imgWidth: 178.w,
         imgHeight: 136.h,
         title: '장바구니가 비어있어요!',
@@ -183,11 +183,11 @@ class _CartScreenState extends State<CartScreen> {
 
     String menuAsset;
     if (cartList[index].menuName == "아메리카노") {
-      menuAsset = "./images/americano.jpg";
+      menuAsset = "assets/images/americano.jpg";
     } else if (cartList[index].menuName == "카페라떼") {
-      menuAsset = "./images/latte.jpg";
+      menuAsset = "assets/images/latte.jpg";
     } else {
-      menuAsset = "./images/juice.jpeg";
+      menuAsset = "assets/images/juice.jpeg";
     }
 
     return Container(

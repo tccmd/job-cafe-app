@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "78271867642",
+    "project_id": "cudifire",
+    "storage_bucket": "cudifire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78271867642:android:3dafdd4bc2383bbdac3743",
+        "android_client_info": {
+          "package_name": "com.allrounder.cudi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8zG52_cLOcVUQZ1GO_efytaxAElFWjEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

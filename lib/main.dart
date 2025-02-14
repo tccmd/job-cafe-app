@@ -1,7 +1,12 @@
-import 'package:CUDI/screens/auth/splash_screen.dart';
-import 'package:CUDI/theme.dart';
-import 'package:CUDI/utils/push/notification_service.dart';
-import 'package:CUDI/utils/provider.dart';
+import 'package:jobCafeApp/screens/auth/launch_screen.dart';
+import 'package:jobCafeApp/screens/auth/login_screen.dart';
+import 'package:jobCafeApp/screens/auth/splash_screen.dart';
+import 'package:jobCafeApp/screens/home/home_screen.dart';
+import 'package:jobCafeApp/theme.dart';
+import 'package:jobCafeApp/utils/auth/authentication.dart';
+import 'package:jobCafeApp/utils/push/notification_service.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_inputs.dart';
 // import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,7 +24,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  await dotenv.load();
+
+  // await dotenv.load();
 
   // Initialize a GlobalKey to obtain context later
   GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -72,6 +78,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
+    // Authentication().login(context, emailController.text, passwordController.text, true) ?? '';
     return ScreenUtilInit(
         designSize: const Size(390, 844),
         minTextAdapt: true, // 너비와 높이의 최소값에 따라 텍스트를 조정할지 여부

@@ -1,0 +1,59 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="CUDI"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <!-- 구글 지도 -->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBGjXNGGwBv0ccVaZCruv0jkB8MZu7VyjM"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize"
+            android:usesCleartextTraffic="true"
+            >
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <!--For Dynamic links-->
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="cuudi.page.link"
+                    android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+        <!-- 예약된 알림을 처리하기 위해 <receiver> 태그 사용 -->
+<!--        <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />-->
+    </application>
+    <!--  비디오 플레이어의 비디오가 네트워크 기반일 경우 추가  -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--  안드로이드 로컬 푸시 알림 권한  -->
+    <!--  알림이 발생할 때 진동 기능을 사용할 수 있도록 허용  -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--  알림이 발생했을 때 기기가 슬립 상태에서 깨어날 수 있도록 허용  -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 앱이 전화 기능을 사용할 수 있도록 권한 허용 -->
+<!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
+    <!-- 앱이 위치 기능을 사용할 수 있도록 권한 허용 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+</manifest>

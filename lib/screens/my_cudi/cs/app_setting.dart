@@ -1,7 +1,7 @@
-import 'package:CUDI/screens/auth/term_screen.dart';
-import 'package:CUDI/screens/my_cudi/cs/user_secession.dart';
-import 'package:CUDI/utils/auth/authentication.dart';
-import 'package:CUDI/utils/provider.dart';
+import 'package:jobCafeApp/screens/auth/term_screen.dart';
+import 'package:jobCafeApp/screens/my_cudi/cs/user_secession.dart';
+import 'package:jobCafeApp/utils/auth/authentication.dart';
+import 'package:jobCafeApp/utils/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -94,7 +94,7 @@ class _AppSettingState extends State<AppSetting> {
     '푸쉬알림',
     '프로모션 / 이벤트 알림 수신',
     '위치기반 정보서비스 이용약관 동의',
-    'CUPAY 알림',
+    'MINTPAY 알림',
     '이용약관',
     '개인정보처리방침',
     '버전정보',

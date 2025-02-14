@@ -21,7 +21,27 @@ ThemeData theme() {
     scaffoldBackgroundColor: black,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: black
-    )
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: WidgetStateProperty.resolveWith<Color>((states) {
+          if (states.contains(WidgetState.focused)) {
+            return choco;
+          } else if (states.contains(WidgetState.pressed) || states.contains(WidgetState.hovered)) {
+            return choco;
+          }
+          return choco; // 기본 색상
+        }),
+        backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
+          if (states.contains(WidgetState.focused)) {
+            return primary3;
+          } else if (states.contains(WidgetState.pressed) || states.contains(WidgetState.hovered)) {
+            return primary3;
+          }
+          return primary; // 기본 색상
+        }),
+      )
+    ),
   );
 }
 

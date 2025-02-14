@@ -19,7 +19,7 @@ class _ChargingHistoryScreenState extends State<ChargingHistoryScreen> {
         top: false,
         child: CustomScrollView(
           slivers: <Widget>[
-            sliverAppBar(context, title: '쿠디페이 충전내역'),
+            sliverAppBar(context, title: '민트페이 충전내역'),
             SliverList(
               delegate: SliverChildListDelegate([
                 DefaultTabController(

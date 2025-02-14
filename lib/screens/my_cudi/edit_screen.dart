@@ -1,6 +1,6 @@
-import 'package:CUDI/screens/components/app_bar.dart';
-import 'package:CUDI/screens/my_cudi/components/profile.dart';
-import 'package:CUDI/widgets/cudi_util_widgets.dart';
+import 'package:jobCafeApp/screens/components/app_bar.dart';
+import 'package:jobCafeApp/screens/my_cudi/components/profile.dart';
+import 'package:jobCafeApp/widgets/cudi_util_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

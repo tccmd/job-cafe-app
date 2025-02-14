@@ -1,6 +1,6 @@
-import 'package:CUDI/screens/my_cudi/cs/app_setting.dart';
-import 'package:CUDI/screens/my_cudi/cs/cudi_info.dart';
-import 'package:CUDI/screens/components/screens.dart';
+import 'package:jobCafeApp/screens/my_cudi/cs/app_setting.dart';
+import 'package:jobCafeApp/screens/my_cudi/cs/cudi_info.dart';
+import 'package:jobCafeApp/screens/components/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../components/app_bar.dart';
@@ -91,7 +91,7 @@ class _CustomerCenterScreenState extends State<CustomerCenterScreen> {
   }
 
   Widget csVerticalList(){
-    List<String> myColumnListList = ['이메일 문의', '카페 신고', '앱설정', 'CUDI 정보'];
+    List<String> myColumnListList = ['이메일 문의', '카페 신고', '앱설정', 'MINT 정보'];
     return Padding(
       padding: pd24h,
       child: SizedBox(
@@ -138,7 +138,7 @@ class _CustomerCenterScreenState extends State<CustomerCenterScreen> {
 }
 
 /// 고객센터
-List<String> appbarTitleList = ['고객센터', '이메일 문의', '카페 신고', '앱설정', 'CUDI 정보', '회원탈퇴'];
+List<String> appbarTitleList = ['고객센터', '이메일 문의', '카페 신고', '앱설정', 'MINT 정보', '회원탈퇴'];
 List<Column> columnList = [customerServiceCenter(), Column(), Column(), Column(), Column(), Column()];
 DateTime time = DateTime.now();
 Column customerServiceCenter() {
@@ -154,7 +154,7 @@ Column customerServiceCenter() {
               title: const Text('[공지] 서비스 점검 안내'),
               subtitle: Text('${time.year}년 ${time.month}월 ${time.day}일', style: s12.copyWith(color: gray79)),
                 children: [
-                  Text("-", // lorem,
+                  Text(lorem,
                   style: h17.copyWith(color: grayB5)),
                 ]
             );

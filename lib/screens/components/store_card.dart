@@ -1,4 +1,4 @@
-import 'package:CUDI/utils/provider.dart';
+import 'package:jobCafeApp/utils/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -47,6 +47,11 @@ class _StoreCardState extends State<StoreCard> {
   }
 
   Widget storeImage() {
+    return Image.asset('assets/images/matterport_model.png',
+      fit: BoxFit.cover,
+      width: 342.w,
+      height: 456.h,
+    );
     return Image.network(
       store.storeImageUrl.toString(),
       fit: BoxFit.cover,

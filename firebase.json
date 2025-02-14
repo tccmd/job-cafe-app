@@ -1,0 +1,49 @@
+{
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "cudifire",
+          "appId": "1:78271867642:android:3dafdd4bc2383bbdac3743",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "cudifire",
+          "appId": "1:78271867642:ios:e701deed29607b7cac3743",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "cudifire",
+          "appId": "1:78271867642:ios:dc184ea3d4ecd072ac3743",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "cudifire",
+          "configurations": {
+            "android": "1:78271867642:android:3dafdd4bc2383bbdac3743",
+            "ios": "1:78271867642:ios:e701deed29607b7cac3743",
+            "macos": "1:78271867642:ios:dc184ea3d4ecd072ac3743",
+            "web": "1:78271867642:web:3769733d61db94c8ac3743",
+            "windows": "1:78271867642:web:428432b0b138b42aac3743"
+          }
+        }
+      }
+    }
+  }
+}

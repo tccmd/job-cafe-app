@@ -19,7 +19,7 @@ class _ReservesScreenState extends State<ReservesScreen> {
         top: false,
         child: CustomScrollView(
           slivers: <Widget>[
-            sliverAppBar(context, title: '쿠디페이 적립금'),
+            sliverAppBar(context, title: '민트페이 적립금'),
             SliverList(
               delegate: SliverChildListDelegate([
                 DefaultTabController(
@@ -95,38 +95,38 @@ class _ReservesScreenState extends State<ReservesScreen> {
 
   List<Map<String, dynamic>> reserves = [
     {
-      "title": "쿠페이 적립",
-      "subtitle": "OOU 카페 주문",
+      "title": "민트페이 적립",
+      "subtitle": "MINT 카페 주문",
       "three_line": "2023년 11월 12일",
       "condition": "지급",
     },
     {
       "title": "적립금 사용",
-      "subtitle": "OOU 카페 주문",
+      "subtitle": "MINT 카페 주문",
       "three_line": "2023년 11월 12일",
       "condition": "사용",
     },
     {
       "title": "적립금 사용",
-      "subtitle": "OOU 카페 주문",
+      "subtitle": "MINT 카페 주문",
       "three_line": "2023년 11월 12일",
       "condition": "사용",
     },
     {
-      "title": "쿠페이 적립",
-      "subtitle": "OOU 카페 주문",
+      "title": "민트페이 적립",
+      "subtitle": "MINT 카페 주문",
       "three_line": "2023년 11월 12일",
       "condition": "지급",
     },
     {
-      "title": "쿠페이 적립",
-      "subtitle": "OOU 카페 주문",
+      "title": "민트페이 적립",
+      "subtitle": "MINT 카페 주문",
       "three_line": "2023년 11월 12일",
       "condition": "지급",
     },
     {
       "title": "적립금 사용",
-      "subtitle": "OOU 카페 주문",
+      "subtitle": "MINT 카페 주문",
       "three_line": "2023년 11월 12일",
       "condition": "사용",
     },

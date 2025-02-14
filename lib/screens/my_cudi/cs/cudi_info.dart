@@ -88,13 +88,13 @@ class _CUDIInfoState extends State<CUDIInfo> {
     '팩스번호',
   ];
   List<String> descList = [
-    'All ROUNDER(올라운더)',
-    '정창훈, 한영균',
-    '544-17-01958',
-    '2023-부산연제-0841 호',
-    '부산광역시 연제구 쌍미천로 89',
-    '051.852.3355',
-    '051.852.3351',
+    'MintChoco(민트초코)',
+    '정희원',
+    '000-00-00000',
+    '0000-민트초코-0000 호',
+    '대한민국',
+    '000.000.0000',
+    '000.000.0000',
   ];
   Container bottomBorderContainer(int index) {
     return Container(

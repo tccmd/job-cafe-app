@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:CUDI/screens/store/store_screen.dart';
-import 'package:CUDI/utils/provider.dart';
+import 'package:jobCafeApp/screens/store/store_screen.dart';
+import 'package:jobCafeApp/utils/provider.dart';
 // import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,19 +33,12 @@ Widget circleBeany(BuildContext context,
   return img == null
       ? Stack(
         children: [Image.asset(
-            isSmaile
-                ? 'assets/images/img-profile-success-96px.png'
-                : 'assets/images/img-profile-fail-96px.png',
+          'assets/logo/MintChoco-face.png',
+            // isSmaile
+            //     ? 'assets/images/img-profile-success-96px.png'
+            //     : 'assets/images/img-profile-fail-96px.png',
             width: size,
             height: size),
-          Positioned.fill(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0), // 블러 강도 설정
-              child: Container(
-                color: Colors.black.withOpacity(0.1), // 선택사항: 블러 위에 반투명 레이어 추가
-              ),
-            ),
-          ),
       ])
       : CircleAvatar(
           backgroundColor: black,
@@ -72,7 +65,7 @@ Widget cudiBest() {
     color: black,
     child: const Padding(
       padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-      child: Text('CUDI BEST',
+      child: Text('MINT BEST',
           style: TextStyle(
               fontSize: 12.0, fontWeight: FontWeight.w600, inherit: false),
           maxLines: 1,
@@ -363,7 +356,7 @@ Widget cupayCard() {
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('CUDIPAY',
+                  Text('MINTPAY',
                       style: TextStyle(
                           fontSize: 20.0, fontWeight: FontWeight.w900)),
                   Text('0000 0000 0000 0000',

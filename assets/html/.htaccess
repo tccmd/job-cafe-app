@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # HTTPS로 리디렉션
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # CORS 설정
+    <IfModule mod_headers.c>
+        SetEnvIf Origin "https://3d-allrounder\.com$" AccessControlAllowOrigin=$0
+        Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+        Header always set Access-Control-Allow-Methods "GET, HEAD, POST, PUT, DELETE"
+        Header always set Access-Control-Allow-Headers "Authorization, Content-Type"
+        Header always set Access-Control-Allow-Credentials true
+    </IfModule>
+
+    # 존재하지 않는 경로 리디렉션
+    RewriteCond %{HTTP_HOST} =home.3d-allrounder.com
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # /sendEmail에 대한 예외
+    RewriteCond %{REQUEST_URI} !^/sendEmail
+    RewriteRule ^(.*)$ https://home.3d-allrounder.com/$1 [L,R=301]
+</IfModule>

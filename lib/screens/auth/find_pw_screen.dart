@@ -1,4 +1,4 @@
-import 'package:CUDI/utils/provider.dart';
+import 'package:jobCafeApp/utils/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;

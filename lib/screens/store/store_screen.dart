@@ -1,4 +1,4 @@
-import 'package:CUDI/screens/components/icons/haert_icon.dart';
+import 'package:jobCafeApp/screens/components/icons/haert_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -112,7 +112,7 @@ class _StoreScreenState extends State<StoreScreen> {
                     ? Container(
                         decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('./images/matterport_model.png'),
+                              image: AssetImage('assets/images/matterport_model.png'),
                                 // image: NetworkImage(
                                 //     store.storeImgList?[index] ?? ''),
                                 fit: BoxFit.cover)))
@@ -162,57 +162,58 @@ class _StoreScreenState extends State<StoreScreen> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         // TextButton(onPressed: () {
-        //   FireStore.updateStoreData(store.storeId!, 35.162297, 129.160803);
+        //   FireStore.updateStoreData(store.storeId!, 37.5063677, 130.8571536);
         // }, child: const Text('함수 실행')),
-        TextButton(onPressed: (){
 
-          Menu one = Menu(
-            storeId: store.storeId,
-            menuName: '아메리카노',
-            menuPrice: 3200,
-            menuDesc: '깔끔하고 부드러운 맛을 자랑하는 아메리카노입니다. 깊고 진한 커피 향이 입안을 가득 채우며, 산뜻한 피니시로 부담 없이 즐길 수 있는 클래식한 음료입니다. 커피 본연의 맛을 즐기고 싶다면 이 아메리카노가 제격입니다.',
-            menuImgList: [
-              '.'
-            ],
-            menuAllergy: '카페인, 크로스 컨태미네이션, 첨가물',
-            menuCategory: '시그니처',
-          );
-
-          Menu two = Menu(
-            storeId: store.storeId,
-            menuName: '카페라떼',
-            menuPrice: 5000,
-            menuDesc: '부드러운 우유와 진한 에스프레소가 조화롭게 어우러진 라떼입니다. 따뜻한 우유 거품 위로 펼쳐진 섬세한 라떼 아트가 시각적 즐거움까지 선사하며, 한 모금 마실 때마다 고소하고 부드러운 맛이 입안을 감쌉니다. 편안한 휴식을 원할 때 최적의 선택입니다.',
-            menuImgList: [
-              '.',
-              '.'
-            ],
-            menuAllergy: '우유',
-            menuCategory: '커피',
-          );
-
-          Menu three = Menu(
-            storeId: store.storeId,
-            menuName: '주스',
-            menuPrice: 3000,
-            menuDesc: '상큼하고 달콤한 과일 향이 가득한 음료입니다. 톡 쏘는 탄산과 신선한 과일의 조화가 어우러져 입안을 상쾌하게 만들어줍니다. 더운 여름날, 또는 기분 전환이 필요할 때 언제든지 즐기기 좋은 음료입니다.',
-            menuImgList: [
-              '.'
-            ],
-            menuAllergy: '밀, 계란, 우유, 대두',
-            menuCategory: '디저트',
-          );
-
-          List<Menu> etcMenuListFinalPart = [
-            one,
-            two,
-            three
-          ];
-
-          for (Menu eachMenu in etcMenuListFinalPart) {
-            FireStore.addMenu(eachMenu, store.storeId);
-          }
-        }, child: const Text('이 스토어의 메뉴 추가')),
+        // TextButton(onPressed: (){
+        //
+        //   Menu one = Menu(
+        //     storeId: store.storeId,
+        //     menuName: '아메리카노',
+        //     menuPrice: 3200,
+        //     menuDesc: '깔끔하고 부드러운 맛을 자랑하는 아메리카노입니다. 깊고 진한 커피 향이 입안을 가득 채우며, 산뜻한 피니시로 부담 없이 즐길 수 있는 클래식한 음료입니다. 커피 본연의 맛을 즐기고 싶다면 이 아메리카노가 제격입니다.',
+        //     menuImgList: [
+        //       '.'
+        //     ],
+        //     menuAllergy: '카페인, 크로스 컨태미네이션, 첨가물',
+        //     menuCategory: '시그니처',
+        //   );
+        //
+        //   Menu two = Menu(
+        //     storeId: store.storeId,
+        //     menuName: '카페라떼',
+        //     menuPrice: 5000,
+        //     menuDesc: '부드러운 우유와 진한 에스프레소가 조화롭게 어우러진 라떼입니다. 따뜻한 우유 거품 위로 펼쳐진 섬세한 라떼 아트가 시각적 즐거움까지 선사하며, 한 모금 마실 때마다 고소하고 부드러운 맛이 입안을 감쌉니다. 편안한 휴식을 원할 때 최적의 선택입니다.',
+        //     menuImgList: [
+        //       '.',
+        //       '.'
+        //     ],
+        //     menuAllergy: '우유',
+        //     menuCategory: '커피',
+        //   );
+        //
+        //   Menu three = Menu(
+        //     storeId: store.storeId,
+        //     menuName: '주스',
+        //     menuPrice: 3000,
+        //     menuDesc: '상큼하고 달콤한 과일 향이 가득한 음료입니다. 톡 쏘는 탄산과 신선한 과일의 조화가 어우러져 입안을 상쾌하게 만들어줍니다. 더운 여름날, 또는 기분 전환이 필요할 때 언제든지 즐기기 좋은 음료입니다.',
+        //     menuImgList: [
+        //       '.'
+        //     ],
+        //     menuAllergy: '밀, 계란, 우유, 대두',
+        //     menuCategory: '디저트',
+        //   );
+        //
+        //   List<Menu> etcMenuListFinalPart = [
+        //     one,
+        //     two,
+        //     three
+        //   ];
+        //
+        //   for (Menu eachMenu in etcMenuListFinalPart) {
+        //     FireStore.addMenu(eachMenu, store.storeId);
+        //   }
+        // }, child: const Text('이 스토어의 메뉴 추가')),
         menuPagenation(store),
         manuBottomSheetClosed(store),
         sheetButtonsWidget(),

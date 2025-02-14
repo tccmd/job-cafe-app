@@ -1,6 +1,6 @@
-import 'package:CUDI/screens/components/no_content.dart';
-import 'package:CUDI/utils/db/firebase_firestore.dart';
-import 'package:CUDI/widgets/cudi_util_widgets.dart';
+import 'package:jobCafeApp/screens/components/no_content.dart';
+import 'package:jobCafeApp/utils/db/firebase_firestore.dart';
+import 'package:jobCafeApp/widgets/cudi_util_widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -85,7 +85,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
 
   Widget _noContent() {
     return NoContent(
-        imgUrl: 'assets/images/img-emptystate-heartlist.png',
+        imgUrl: 'assets/logo/MintChoco.png',
         imgWidth: 131.w,
         imgHeight: 136.h,
         title: '아직 찜한 카페가 없어요!',
@@ -175,7 +175,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
         child: Stack(
           children: [
             // Image.network(store.storeImageUrl.toString(),
-            Image.asset('./images/matterport_model.png',
+            Image.asset('assets/images/matterport_model.png',
                 fit: BoxFit.cover, height: 214.h, width: 161.w),
             Positioned(
               right: 8.w,

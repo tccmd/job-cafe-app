@@ -1,4 +1,4 @@
-import 'package:CUDI/utils/toss/screens/tosspayments/home.dart';
+import 'package:jobCafeApp/utils/toss/screens/tosspayments/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tosspayments_widget_sdk_flutter/utils/phase.dart';

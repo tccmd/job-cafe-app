@@ -1,12 +1,12 @@
-import 'package:CUDI/screens/components/web_view.dart';
-import 'package:CUDI/screens/menu/menu_screen.dart';
-import 'package:CUDI/screens/my_cudi/my_cudi_screen.dart';
-import 'package:CUDI/screens/order/cart_screen.dart';
-import 'package:CUDI/screens/order/order_screen.dart';
-import 'package:CUDI/screens/main_screens.dart';
-import 'package:CUDI/screens/auth/launch_screen.dart';
-import 'package:CUDI/screens/auth/splash_screen.dart';
-import 'package:CUDI/screens/store/store_screen.dart';
+import 'package:jobCafeApp/screens/components/web_view.dart';
+import 'package:jobCafeApp/screens/menu/menu_screen.dart';
+import 'package:jobCafeApp/screens/my_cudi/my_cudi_screen.dart';
+import 'package:jobCafeApp/screens/order/cart_screen.dart';
+import 'package:jobCafeApp/screens/order/order_screen.dart';
+import 'package:jobCafeApp/screens/main_screens.dart';
+import 'package:jobCafeApp/screens/auth/launch_screen.dart';
+import 'package:jobCafeApp/screens/auth/splash_screen.dart';
+import 'package:jobCafeApp/screens/store/store_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 class RouteName {

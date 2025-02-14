@@ -1,4 +1,4 @@
-import 'package:CUDI/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../components/app_bar.dart';

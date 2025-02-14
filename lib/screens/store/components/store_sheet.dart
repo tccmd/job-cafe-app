@@ -1,7 +1,7 @@
-import 'package:CUDI/models/store.dart';
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/widgets/cudi_widgets.dart';
-import 'package:CUDI/screens/components/icons/haert_icon.dart';
+import 'package:jobCafeApp/models/store.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_widgets.dart';
+import 'package:jobCafeApp/screens/components/icons/haert_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';

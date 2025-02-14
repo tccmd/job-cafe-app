@@ -1,9 +1,9 @@
 import 'dart:ui';
 
-import 'package:CUDI/screens/auth/login_screen.dart';
-import 'package:CUDI/screens/auth/terms_screen.dart';
-import 'package:CUDI/widgets/cudi_buttons.dart';
-import 'package:CUDI/widgets/cudi_logos.dart';
+import 'package:jobCafeApp/screens/auth/login_screen.dart';
+import 'package:jobCafeApp/screens/auth/terms_screen.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/widgets/cudi_logos.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -30,19 +30,11 @@ class _LaunchScreenState extends State<LaunchScreen> {
               const Spacer(flex: 1),
               launchText(),
               const Spacer(flex: 2),
-              Stack(children: [launchBeeni(),
-                Positioned.fill(
-                  child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0), // 블러 강도 설정
-                    child: Container(
-                      color: Colors.black.withOpacity(0.1), // 선택사항: 블러 위에 반투명 레이어 추가
-                    ),
-                  ),
-                ),
+              Stack(children: [launchBeeni()
               ]),
               const Spacer(flex: 2),
               launchButtons(),
-              // const Spacer(flex: 1),
+              const Spacer(flex: 1),
             ],
           ),
         ),

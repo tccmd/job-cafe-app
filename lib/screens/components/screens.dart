@@ -1,6 +1,6 @@
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/widgets/cudi_buttons.dart';
-import 'package:CUDI/widgets/cudi_inputs.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/widgets/cudi_inputs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

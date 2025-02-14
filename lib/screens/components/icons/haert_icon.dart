@@ -1,4 +1,4 @@
-import 'package:CUDI/screens/components/icons/svg_icon.dart';
+import 'package:jobCafeApp/screens/components/icons/svg_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../utils/db/firebase_firestore.dart';

@@ -31,7 +31,7 @@ class _PushScreenState extends State<PushScreen> {
             ? Column(
           children: [
             CudiAppBar(title: '알림', isWhite: true),
-            NoContent(imgUrl: 'assets/images/img-emptystate-push.png', imgWidth: 96.w, imgHeight: 104.h, title: '새로운 알림이 없어요', subTitle: '새로운 소식이 생기면 바로 알려드릴게요!', btnText: '알림받기', function: () => function(p, u))
+            NoContent(imgUrl: 'assets/logo/MintChoco.png', imgWidth: 96.w, imgHeight: 104.h, title: '새로운 알림이 없어요', subTitle: '새로운 소식이 생기면 바로 알려드릴게요!', btnText: '알림받기', function: () => function(p, u))
           ],
         )
             :Column(

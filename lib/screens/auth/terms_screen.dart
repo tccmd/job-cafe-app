@@ -1,6 +1,6 @@
-import 'package:CUDI/screens/auth/phone_certification_screen.dart';
-import 'package:CUDI/screens/auth/term_screen.dart';
-import 'package:CUDI/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/screens/auth/phone_certification_screen.dart';
+import 'package:jobCafeApp/screens/auth/term_screen.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../theme.dart';

@@ -1,6 +1,6 @@
-import 'package:CUDI/screens/payments/charging_history_screen.dart';
-import 'package:CUDI/screens/payments/reserves_screen.dart';
-import 'package:CUDI/widgets/cudi_widgets.dart';
+import 'package:jobCafeApp/screens/payments/charging_history_screen.dart';
+import 'package:jobCafeApp/screens/payments/reserves_screen.dart';
+import 'package:jobCafeApp/widgets/cudi_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../widgets/cudi_buttons.dart';
@@ -23,7 +23,7 @@ class _MyCupayScreenState extends State<MyCupayScreen> {
         child: CustomScrollView(
           slivers: <Widget>[
             sliverAppBar(context,
-                title: '쿠디페이', iconButton: const CartIcon()),
+                title: '민트페이', iconButton: const CartIcon()),
             SliverList(
               delegate: SliverChildListDelegate([
                 Padding(
@@ -111,12 +111,12 @@ class _MyCupayScreenState extends State<MyCupayScreen> {
         children: [
           Container(),
           const Positioned(
-              child: Text('CUDIPAY',
+              child: Text('MINTPAY',
                   style:
                       TextStyle(fontSize: 20.0, fontWeight: FontWeight.w900))),
           const Positioned(
               top: 35,
-              child: Text('쿠디페이 등록하기',
+              child: Text('민트페이 등록하기',
                   style:
                       TextStyle(fontSize: 16.0, fontWeight: FontWeight.w700))),
           const Positioned(bottom: 25, child: Text('잔액')),
@@ -161,7 +161,7 @@ class _MyCupayScreenState extends State<MyCupayScreen> {
   Widget cupayReserve() {
     return Column(
       children: [
-        containerTitle(context, text: '쿠디페이 적립금', where: const ReservesScreen()),
+        containerTitle(context, text: '민트페이 적립금', where: const ReservesScreen()),
         cupayReserves(),
       ],
     );

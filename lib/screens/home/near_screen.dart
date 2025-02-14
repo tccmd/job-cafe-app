@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:ui' as ui;
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/screens/components/icons/haert_icon.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/screens/components/icons/haert_icon.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart' hide CarouselController;
 import 'package:flutter/services.dart';
@@ -24,7 +24,7 @@ class NearScreen extends StatefulWidget {
 class _NearScreenState extends State<NearScreen> {
   // 기본 위치 설정
   final CameraPosition position =
-      const CameraPosition(target: LatLng(35.186103, 129.081756), zoom: 14);
+      const CameraPosition(target: LatLng(37.24320911470232, 131.86682058597063), zoom: 14);
 
   // Position() 기본값 설정
   DateTime timestamp = DateTime.now();
@@ -109,9 +109,9 @@ class _NearScreenState extends State<NearScreen> {
   Future<void> addMarker(Position? pos, String markerId,
       {String? markerTitle, String? address, Store? store}) async {
     final Uint8List currIcon =
-        await getBytesFromAsset('assets/images/marker_current.png', 100);
+        await getBytesFromAsset('assets/images/marker1.png', 100);
     final Uint8List storeIcon =
-        await getBytesFromAsset('assets/images/marker.png', 60);
+        await getBytesFromAsset('assets/images/marker2.png', 60);
 
     if (pos != null) {
       // 널 체크 후 로직 계속 수행
@@ -450,7 +450,7 @@ class _NearScreenState extends State<NearScreen> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(11.3.w),
           image: DecorationImage(
-            image: NetworkImage(store.storeImageUrl.toString()),
+            image: AssetImage('assets/images/matterport_model.png'), // NetworkImage(store.storeImageUrl.toString()),
             fit: BoxFit.cover,
           ),
         ),

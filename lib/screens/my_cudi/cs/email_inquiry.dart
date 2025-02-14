@@ -1,4 +1,4 @@
-import 'package:CUDI/widgets/cudi_util_widgets.dart';
+import 'package:jobCafeApp/widgets/cudi_util_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -210,7 +210,7 @@ class _EmailInquiryScreenState extends State<EmailInquiryScreen> {
         'template_id': dotenv.env['E_TEMPLATE_ID'],
         'user_id': dotenv.env['E_USER_ID'],
         'template_params': {
-          'mail_prefix': "쿠디 이메일 문의",
+          'mail_prefix': "민초 이메일 문의",
           'keyName1': "성함",
           'keyValue1': nameCont.text,
           'keyName2': "이메일",

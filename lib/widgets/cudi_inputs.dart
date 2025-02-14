@@ -1,4 +1,4 @@
-import 'package:CUDI/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,11 +9,11 @@ import '../constants.dart';
 
 // Form Controllers
 final TextEditingController eBeforeController = TextEditingController();
-final TextEditingController emailController = TextEditingController();
+final TextEditingController emailController = TextEditingController(text: 'example@example.com');
 final TextEditingController certController = TextEditingController();
-final TextEditingController passwordController = TextEditingController();
+final TextEditingController passwordController = TextEditingController(text: 'password');
 final TextEditingController pwBeforeController = TextEditingController();
-final TextEditingController pwConfirmController = TextEditingController();
+final TextEditingController pwConfirmController = TextEditingController(text: 'password');
 final TextEditingController nickNameController = TextEditingController();
 final TextEditingController birthController = TextEditingController();
 final TextEditingController phoneController = TextEditingController();
@@ -54,6 +54,7 @@ TextField basicTextField(BuildContext context,
     TextInputType? keyboardType,
     Widget? suffixIcon,
     void Function(String)? onChanged,
+      void Function()? onTap,
     bool? obscureText, List<TextInputFormatter>? formatter, bool? enabledFalse, int? maxLength}) {
   return TextField(
     controller: controller,
@@ -67,6 +68,7 @@ TextField basicTextField(BuildContext context,
     obscuringCharacter: '*',
     inputFormatters: formatter ?? [],
     onChanged: onChanged,
+    onTap: onTap,
     cursorColor: white,
     enabled: enabledFalse ?? true,
     decoration: InputDecoration(
@@ -150,6 +152,9 @@ Widget emailInput(context, String label, String hintText, TextEditingController 
               utilProvider.validateEBefore(value);
             }
           },
+          onTap: () {
+            utilProvider.validateEmail(_emailController.text);
+          },
           suffixIcon: validationIcon(_emailController),
         ),
       ],
@@ -224,6 +229,9 @@ Widget passwordInput(context, String label, String hintText, TextEditingControll
             } else if (_passwordController == pwConfirmController) {
               utilProvider.validatePWConfirm(value);
             }
+          },
+          onTap: () {
+            utilProvider.validatePassword(_passwordController.text);
           },
           suffixIcon: validationIcon(_passwordController),
         ),

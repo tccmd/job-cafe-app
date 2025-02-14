@@ -1,4 +1,4 @@
-import 'package:CUDI/utils/provider.dart';
+import 'package:jobCafeApp/utils/provider.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 import '../../models/store.dart';

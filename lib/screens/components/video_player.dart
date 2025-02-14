@@ -1,4 +1,4 @@
-import 'package:CUDI/screens/components/cudi_pay.dart';
+import 'package:jobCafeApp/screens/components/cudi_pay.dart';
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -140,7 +140,7 @@ class _VideoAppState extends State<VideoApp> {
               child: AnimatedOpacity(
               opacity: isView ? 0.0 : 1.0,
               duration: const Duration(milliseconds: 700),
-              child: Image.asset('./images/matterport_model.png', fit: BoxFit.cover
+              child: Image.asset('assets/images/matterport_model.png', fit: BoxFit.cover
               )// Image.network(widget.thumbnailUrl, fit: BoxFit.cover,alignment: Alignment.topCenter,),
                 ),
             ),

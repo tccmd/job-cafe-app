@@ -1,4 +1,4 @@
-import 'package:CUDI/utils/provider.dart';
+import 'package:jobCafeApp/utils/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -276,7 +276,7 @@ class _CafeReportState extends State<CafeReport> {
       'template_id': dotenv.env['E_TEMPLATE_ID'],
       'user_id': dotenv.env['E_USER_ID'],
       'template_params': {
-        'mail_prefix': "쿠디 카페 신고",
+        'mail_prefix': "민트 카페 신고",
         'keyName1': "닉네임",
         'keyValue1': userProvider.currentUser.userNickname,
         'keyName2': "이메일",

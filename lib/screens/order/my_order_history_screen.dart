@@ -1,6 +1,6 @@
-import 'package:CUDI/screens/components/no_content.dart';
+import 'package:jobCafeApp/screens/components/no_content.dart';
 import 'package:flutter/material.dart';
-import 'package:CUDI/screens/order/my_order_history_detail_screen.dart';
+import 'package:jobCafeApp/screens/order/my_order_history_detail_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../routes.dart';
 import '../../widgets/cudi_widgets.dart';

@@ -1,6 +1,6 @@
-import 'package:CUDI/screens/components/screens.dart';
-import 'package:CUDI/utils/db/firebase_firestore.dart';
-import 'package:CUDI/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/screens/components/screens.dart';
+import 'package:jobCafeApp/utils/db/firebase_firestore.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

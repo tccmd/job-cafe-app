@@ -1,7 +1,7 @@
-import 'package:CUDI/utils/db/firebase_firestore.dart';
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/widgets/cudi_inputs.dart';
-import 'package:CUDI/widgets/cudi_util_widgets.dart';
+import 'package:jobCafeApp/utils/db/firebase_firestore.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_inputs.dart';
+import 'package:jobCafeApp/widgets/cudi_util_widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

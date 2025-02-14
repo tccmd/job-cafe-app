@@ -1,7 +1,7 @@
-import 'package:CUDI/routes.dart';
-import 'package:CUDI/screens/order/components/option_sheet.dart';
-// import 'package:CUDI/utils/secure_shot.dart';
-import 'package:CUDI/screens/components/closed_sheet.dart';
+import 'package:jobCafeApp/routes.dart';
+import 'package:jobCafeApp/screens/order/components/option_sheet.dart';
+// import 'package:jobCafeApp/utils/secure_shot.dart';
+import 'package:jobCafeApp/screens/components/closed_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../constants.dart';
@@ -102,11 +102,11 @@ class _MenuScreenState extends State<MenuScreen> {
 
     String menuAsset;
     if (menu.menuCategory == "시그니처") {
-      menuAsset = "./images/americano.jpg";
+      menuAsset = "assets/images/americano.jpg";
     } else if (menu.menuCategory == "커피") {
-      menuAsset = "./images/latte.jpg";
+      menuAsset = "assets/images/latte.jpg";
     } else {
-      menuAsset = "./images/juice.jpeg";
+      menuAsset = "assets/images/juice.jpeg";
     }
 
     double mh = MediaQuery.of(context).size.height;

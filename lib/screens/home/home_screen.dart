@@ -1,10 +1,10 @@
 import 'dart:ui';
 
-import 'package:CUDI/screens/home/near_screen.dart';
-import 'package:CUDI/screens/home/push_screen.dart';
-import 'package:CUDI/screens/home/view_more_screen.dart';
+import 'package:jobCafeApp/screens/home/near_screen.dart';
+import 'package:jobCafeApp/screens/home/push_screen.dart';
+import 'package:jobCafeApp/screens/home/view_more_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:CUDI/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import '../../constants.dart';
@@ -76,19 +76,12 @@ class _HomeScreenState extends State<HomeScreen> {
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Stack(
-                children: [CUDIAnimatedIcon(assetPath: 'assets/images/img-cudipay.png', function: () => Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => const MyCupayScreen())), width: 101.0,
-                  height: 32.0,),
-                  Positioned.fill(
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0), // 블러 강도 설정
-                      child: Container(
-                        color: Colors.black.withOpacity(0.1), // 선택사항: 블러 위에 반투명 레이어 추가
-                      ),
-                    ),
-                  ),
-              ]),
+              // Stack(
+              //   children: [CUDIAnimatedIcon(assetPath: 'assets/images/img-cudipay.png', function: () => Navigator.push(context, MaterialPageRoute(
+              //       builder: (context) => const MyCupayScreen())), width: 101.0,
+              //     height: 32.0,),
+              // ]),
+              ElevatedButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const MyCupayScreen())), child: Text('MINTPAY')),
               SizedBox(
                 width: 16.w,
                 height: 10.h,
@@ -197,4 +190,4 @@ List<CategoryItem> categoryItems = [
   CategoryItem(false, 'RECENT', 'assets/icon/recent.png'),
 ];
 
-List<String> viewMoreTitles = ['쿠디 신규 입점', '쿠디 찜 많은 순', '가까운 카페', '최근 방문한 카페'];
+List<String> viewMoreTitles = ['카페 신규 입점', '카페 찜 많은 순', '가까운 카페', '최근 방문한 카페'];

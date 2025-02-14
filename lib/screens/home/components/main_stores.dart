@@ -1,5 +1,5 @@
-import 'package:CUDI/widgets/cudi_widgets.dart';
-import 'package:CUDI/screens/components/icons/haert_icon.dart';
+import 'package:jobCafeApp/widgets/cudi_widgets.dart';
+import 'package:jobCafeApp/screens/components/icons/haert_icon.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -114,7 +114,7 @@ class _MainStoresState extends State<MainStores> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24.0),
           image: DecorationImage(
-              image: AssetImage('./images/matterport_model.png'),// NetworkImage(store.storeImageUrl.toString()),
+              image: AssetImage('assets/images/matterport_model.png'),// NetworkImage(store.storeImageUrl.toString()),
               fit: BoxFit.cover),
         ),
         child: InkWell(
@@ -213,7 +213,7 @@ class _MainStoresState extends State<MainStores> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(24.0),
                   image: DecorationImage(
-                    image: AssetImage('./images/matterport_model.png'),// NetworkImage(store.value.storeImageUrl.toString()),
+                    image: AssetImage('assets/images/matterport_model.png'),// NetworkImage(store.value.storeImageUrl.toString()),
                     fit: BoxFit.cover,
                   ),
                 ),

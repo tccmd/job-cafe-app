@@ -1,8 +1,8 @@
-import 'package:CUDI/models/coupon.dart';
-import 'package:CUDI/utils/db/firebase_firestore.dart';
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/widgets/cudi_buttons.dart';
-import 'package:CUDI/widgets/cudi_util_widgets.dart';
+import 'package:jobCafeApp/models/coupon.dart';
+import 'package:jobCafeApp/utils/db/firebase_firestore.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/widgets/cudi_util_widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

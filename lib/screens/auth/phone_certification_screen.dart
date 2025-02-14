@@ -1,5 +1,5 @@
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/widgets/cudi_buttons.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../constants.dart';

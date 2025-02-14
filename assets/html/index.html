@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email.js API 예제</title>
+</head>
+<body>
+
+<h1>이메일 전송</h1>
+
+<form id="emailForm">
+    <label for="to">수신자 이메일:</label>
+    <input type="email" id="to" required><br>
+
+    <label for="subject">제목:</label>
+    <input type="text" id="subject" required><br>
+
+    <label for="message">메시지:</label>
+    <textarea id="message" required></textarea><br>
+
+    <button type="button" onclick="sendEmail()">이메일 전송</button>
+</form>
+
+<script>
+		function sendEmail() {
+			// 사용자가 입력한 데이터 가져오기
+			var to = document.getElementById('to').value;
+			var subject = document.getElementById('subject').value;
+			var message = document.getElementById('message').value;
+
+			// Email.js API 엔드포인트 및 인증 정보 설정
+			var apiUrl = 'https://api.emailjs.com/api/v1.0/email/send';
+			var apiKey = 'bOoMNdkIPKMr0XEcx';
+
+			// POST 요청을 위한 데이터 생성
+			var data = {
+				service_id: 'service_blxwp0l',
+				template_id: 'template_fnrc7c9',
+				user_id: apiKey,
+				template_params: {
+					'customer_name': 'flutter 테스트1',
+                    'phone': 'phone',
+                    'inquiry': 'inquiry',
+                    'detail': 'The string did not match the expected pattern.',
+				}
+			};
+
+			// Email.js API에 POST 요청 보내기
+			fetch(apiUrl, {
+				method: 'POST',
+				headers: {
+					'Content-type':'application/json',
+				},
+				body: JSON.stringify(data),
+			})
+			.then(response => {
+		    if (!response.ok) {
+	        throw new Error(`HTTP error! Status: ${response.status}`);
+		    }
+		    return response.json();
+			})
+			.then(data => {
+				console.log('이메일 전송 성공', data);
+			})
+			.catch(error => {
+				console.log('이메일 전송 실패', error);
+			});
+		}
+	</script>
+
+</body>
+</html>

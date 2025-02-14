@@ -1,8 +1,8 @@
 import 'dart:ui';
 
-import 'package:CUDI/routes.dart';
-import 'package:CUDI/utils/auth/authentication.dart';
-import 'package:CUDI/utils/db/firebase_firestore.dart';
+import 'package:jobCafeApp/routes.dart';
+import 'package:jobCafeApp/utils/auth/authentication.dart';
+import 'package:jobCafeApp/utils/db/firebase_firestore.dart';
 // import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 import '../../utils/provider.dart';
@@ -46,25 +46,19 @@ class SplashScreen extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          alignment: Alignment.bottomCenter,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Container(
-              height: double.infinity,
-              alignment: Alignment.bottomCenter,
-              child: Image.asset(
-                'assets/images/00_splash_video.gif',
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-            Positioned.fill(
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0), // 블러 강도 설정
-                child: Container(
-                  color: Colors.black.withOpacity(0.1), // 선택사항: 블러 위에 반투명 레이어 추가
+            Center(
+              child: SizedBox(
+                width: 162,
+                child: Image.asset(
+                  'assets/images/MintChoco.gif',
+                  fit: BoxFit.fitWidth,
                 ),
               ),
             ),
+            SizedBox(height: 270,)
           ],
         ),
       ),

@@ -1,8 +1,8 @@
 import 'dart:math';
 import 'dart:ui';
-import 'package:CUDI/models/order.dart';
-import 'package:CUDI/utils/db/firebase_firestore.dart';
-import 'package:CUDI/utils/provider.dart';
+import 'package:jobCafeApp/models/order.dart';
+import 'package:jobCafeApp/utils/db/firebase_firestore.dart';
+import 'package:jobCafeApp/utils/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

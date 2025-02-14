@@ -1,7 +1,7 @@
-import 'package:CUDI/utils/toss/screens/intro.dart';
-import 'package:CUDI/utils/toss/screens/result.dart';
-import 'package:CUDI/utils/toss/screens/tosspayments/home.dart';
-import 'package:CUDI/utils/toss/screens/tosspayments_widget/widget_home.dart';
+import 'package:jobCafeApp/utils/toss/screens/intro.dart';
+import 'package:jobCafeApp/utils/toss/screens/result.dart';
+import 'package:jobCafeApp/utils/toss/screens/tosspayments/home.dart';
+import 'package:jobCafeApp/utils/toss/screens/tosspayments_widget/widget_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';

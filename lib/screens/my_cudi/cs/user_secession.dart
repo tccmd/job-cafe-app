@@ -1,11 +1,11 @@
-import 'package:CUDI/routes.dart';
-import 'package:CUDI/screens/components/screens.dart';
-import 'package:CUDI/utils/auth/authentication.dart';
-import 'package:CUDI/utils/db/firebase_firestore.dart';
-import 'package:CUDI/utils/provider.dart';
-import 'package:CUDI/widgets/cudi_checkboxes.dart';
-import 'package:CUDI/widgets/cudi_inputs.dart';
-import 'package:CUDI/widgets/cudi_util_widgets.dart';
+import 'package:jobCafeApp/routes.dart';
+import 'package:jobCafeApp/screens/components/screens.dart';
+import 'package:jobCafeApp/utils/auth/authentication.dart';
+import 'package:jobCafeApp/utils/db/firebase_firestore.dart';
+import 'package:jobCafeApp/utils/provider.dart';
+import 'package:jobCafeApp/widgets/cudi_checkboxes.dart';
+import 'package:jobCafeApp/widgets/cudi_inputs.dart';
+import 'package:jobCafeApp/widgets/cudi_util_widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -410,7 +410,7 @@ class _UserSecession2State extends State<UserSecession2> {
                 : null));
   }
 
-  String textVariable2 = '회원탈퇴가 완료되었습니다.\n더 나은 쿠디가 될게요.\n꼭 다시 봐요!';
+  String textVariable2 = '회원탈퇴가 완료되었습니다.\n더 나은 민트가 될게요.\n꼭 다시 봐요!';
 
   Column out3Widget() {
     return Column(
